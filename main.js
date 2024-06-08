@@ -35,7 +35,7 @@ function initializeSwiper() {
 
   const swiper4 = new Swiper(".partners__swiper", {
     slidesPerView: 2,
-    spaceBetween: 30,
+    spaceBetween: 10,
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',

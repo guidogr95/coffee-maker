@@ -82,6 +82,9 @@
 
 		&__swiper {
 			margin: 80px 0;
+			@include max-width($breakpoint-xs-max) {
+				margin: 50px 0;
+			}
 			.swiper-slide {
 				width: auto !important;
 				text-align: center;

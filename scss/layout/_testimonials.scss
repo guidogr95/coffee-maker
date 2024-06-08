@@ -35,6 +35,9 @@
 			&-thumbnail {
 				position: relative;
 				height: 180px;
+				@include max-width($breakpoint-xs-max) {
+					height: 150px;
+				}
 				img {
 					height: 100%;
 				}
@@ -65,7 +68,9 @@
 				color: $text-dark-blue;
 				text-align: center;
 				font-size: 18px;
-				line-height: 2;
+				@include max-width($breakpoint-xs-max) {
+					line-height: 1.5;
+				}
 			}
 
 			h5, p {
@@ -114,6 +119,9 @@
 		&__section-subtitle {
 			@include section-subtitle();
 			margin-bottom: 80px;
+			@include max-width($breakpoint-xs-max) {
+				margin-bottom: 50px;
+			}
 		}
 	}
 }
