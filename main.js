@@ -63,56 +63,50 @@ function initializeSwiper() {
 }
 
 function handleSectionScroll() {
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-l');
+  const navbar = document.getElementById('navbar');
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-l');
-    const navbar = document.getElementById('navbar');
-  
-    function highlightNav() {
-      let index = sections.length;
-  
-      while (--index && window.scrollY + 47 < sections[index].offsetTop) {}
-  
-      navLinks.forEach((link) => link?.parentElement.classList.remove('active'));
-      navLinks[index - 1]?.parentElement.classList.add('active');
+  function highlightNav() {
+    let index = sections.length;
+
+    while (--index && window.scrollY + 47 < sections[index].offsetTop) {}
+
+    navLinks.forEach((link) => link?.parentElement.classList.remove('active'));
+    navLinks[index - 1]?.parentElement.classList.add('active');
+  }
+
+  highlightNav();
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 47) {
+      navbar.classList.add('sticky');
+    } else {
+      navbar.classList.remove('sticky');
     }
-  
     highlightNav();
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 47) {
-        navbar.classList.add('sticky');
-      } else {
-        navbar.classList.remove('sticky');
-      }
-      highlightNav();
-    });
   });
 }
 
 function handleMenu() {
-  document.addEventListener('DOMContentLoaded', function() {
-    
-    const menuButton = document.getElementById('menu-button');
-    const navContent = document.getElementById('mobile-nav-content');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
+  const menuButton = document.getElementById('menu-button');
+  const navContent = document.getElementById('mobile-nav-content');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
 
-    function handleClick() {
-      if (menuButton.checked) {
-        navContent.classList.remove('hidden')
-        } else {
-        navContent.classList.add('hidden')
-      }
+  function handleClick() {
+    if (menuButton.checked) {
+      navContent.classList.remove('hidden')
+      } else {
+      navContent.classList.add('hidden')
     }
+  }
 
-    menuButton.addEventListener('click', handleClick);
+  menuButton.addEventListener('click', handleClick);
 
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        menuButton.click();
-      });
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuButton.click();
     });
-    });
+  });
 }
 
 initializeSwiper();
