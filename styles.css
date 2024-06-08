@@ -568,8 +568,8 @@ header .nav {
             padding: 14px 24px; } }
         @media (max-width: 768px) {
           #programs .programs__tabs .nav-tabs .nav-item .nav-link {
-            font-size: 18px;
-            padding: 14px 20px; } }
+            font-size: 16px;
+            padding: 14px 12px; } }
         #programs .programs__tabs .nav-tabs .nav-item .nav-link:hover {
           color: #101010; }
         #programs .programs__tabs .nav-tabs .nav-item .nav-link::after {

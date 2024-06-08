@@ -110,8 +110,8 @@ $active-tab-border-height: 4px;
 						}
 
 						@include max-width($breakpoint-md-min) {
-							font-size: 18px;
-							padding: 14px 20px;
+							font-size: 16px;
+							padding: 14px 12px;
 						}
 
 						&:hover {
