@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@5.0.3/css/swiper.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- desktop navbar -->
+    <header id="navbar" class="desktop-header">
+      <nav class="nav">
+        <div class="nav__brand">
+          <div class="nav__brand-separator nav__brand-separator-l"></div>
+          <a class="nav__brand-logo" href="#">
+            <img
+              src="assets/images/logo.png"
+              alt="Coffee Maker Logo"
+              loading="lazy"
+            />
+          </a>
+          <div class="nav__brand-separator nav__brand-separator-r"></div>
+        </div>
+        <ul class="nav__menu">
+          <li><a class="nav-l" href="#programs">PROGRAM</a></li>
+          <li><a class="nav-l" href="#gallery">GALLERY</a></li>
+          <li><a class="nav-l" href="#testimonials">TESTIMONIALS</a></li>
+          <li><a class="nav-l" href="#partners">PARTNERS</a></li>
+          <li><a class="nav-l" href="#contact">CONTACT</a></li>
+        </ul>
+        <div class="nav__ph">
+          <a
+            href="tel:+380996611730"
+            aria-label="Call us at +38 (099) 66-11-730"
+          >
+            +38 (099) 66-11-730
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <header class="mobile-header">
+      <nav>
+        <div class="mobile-header__top">
+          <input
+            id="menu-button"
+            type="checkbox"
+            role="button"
+            aria-label="Display the menu"
+            class="menu"
+            click="handleMenu()">
+
+          <span>
+            COFFEE MAKER
+          </span>
+        </div>
+        <div id="mobile-nav-content" class="mobile-header__content hidden">
+          <ul class="mobile-header__menu">
+            <li><a class="mobile-link" href="#programs">PROGRAM</a></li>
+            <li><a class="mobile-link" href="#gallery">GALLERY</a></li>
+            <li><a class="mobile-link" href="#testimonials">TESTIMONIALS</a></li>
+            <li><a class="mobile-link" href="#partners">PARTNERS</a></li>
+            <li><a class="mobile-link" href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <section id="hero" class="hero">
+        <div class="hero__content">
+          <div class="hero__content-stars">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+          </div>
+          <div class="hero__content-min-title">
+            <img
+              class="hero__content-min-title-cone"
+              src="assets/images/cone.png"
+            />
+            <h4>Intensive program barista training</h4>
+            <img
+              class="hero__content-min-title-cone right"
+              src="assets/images/cone.png"
+            />
+          </div>
+          <h1>BARISTA TRAINING IN <span>AMSTERDAM</span></h1>
+          <h3>On the basis of the company's largets coffee roasters</h3>
+          <div class="hero__content-link-separator">
+            <img class="cone" src="assets/images/cone.png" />
+            <div class="circle"></div>
+            <img class="cone right" src="assets/images/cone.png" />
+          </div>
+          <a class="hero__content-link" href="#programs">
+						<i class="fa fa-chevron-down" aria-hidden="true"></i>
+					</a>
+        </div>
+        <div class="hero__background">
+          <picture>
+            <!-- WebP source with srcset for responsive images -->
+            <source
+              type="image/webp"
+              srcset="
+                assets/images/coffee-background-320p.webp   320w,
+                assets/images/coffee-background-480p.webp   480w,
+                assets/images/coffee-background-800p.webp   800w,
+                assets/images/coffee-background-1200p.webp 1200w,
+                assets/images/coffee-background-1080p.webp 1920w,
+                assets/images/coffee-background-1440p.webp 2560w,
+                assets/images/coffee-background-4k.webp    3840w
+              "
+            />
+            <!-- Fallback for browsers that don't support the <picture> element -->
+            <img
+              src="assets/images/coffee-background-800p.jpg"
+              alt="coffee making background"
+              srcset="
+                assets/images/coffee-background-320p.jpg   320w,
+                assets/images/coffee-background-480p.jpg   480w,
+                assets/images/coffee-background-800p.jpg   800w,
+                assets/images/coffee-background-1200p.jpg 1200w,
+                assets/images/coffee-background-1080p.jpg 1920w,
+                assets/images/coffee-background-1440p.jpg 2560w,
+                assets/images/coffee-background-4k.jpg    3840w
+              "
+            />
+          </picture>
+        </div>
+        <div class="hero__background-footer">
+          <img
+            src="assets/images/mask-800p.png"
+            srcset="
+              assets/images/mask-320p.png   320w,
+              assets/images/mask-480p.png   480w,
+              assets/images/mask-800p.png   800w,
+              assets/images/mask-1200p.png 1200w,
+              assets/images/mask-1080p.png 1920w,
+              assets/images/mask-1440p.png 2560w,
+              assets/images/mask-4k.png    3840w
+            "
+          />
+        </div>
+				<div class="hero__footer-item">
+          <img src="assets/images/granola-smoked.png" alt="coffee bean">
+        </div>
+      </section>
+			<section id="programs" class="programs">
+        <div class="programs__background">
+          <picture>
+            <!-- WebP source with srcset for responsive images -->
+            <source
+              type="image/webp"
+              srcset="
+                assets/images/bg-320p.webp   320w,
+                assets/images/bg-480p.webp   480w,
+                assets/images/bg-800p.webp   800w,
+                assets/images/bg-1200p.webp 1200w,
+                assets/images/bg-1080p.webp 1920w,
+                assets/images/bg-1440p.webp 2560w,
+                assets/images/bg-4k.webp    3840w
+              "
+            />
+            <!-- Fallback for browsers that don't support the <picture> element -->
+            <img
+              src="assets/images/bg-800p.jpg"
+              alt="textured background"
+              srcset="
+                assets/images/bg-320p.jpg   320w,
+                assets/images/bg-480p.jpg   480w,
+                assets/images/bg-800p.jpg   800w,
+                assets/images/bg-1200p.jpg 1200w,
+                assets/images/bg-1080p.jpg 1920w,
+                assets/images/bg-1440p.jpg 2560w,
+                assets/images/bg-4k.jpg    3840w
+              "
+            />
+          </picture>
+        </div>
+        <div class="programs__item-1">
+          <img src="assets/images/coffebean3_2x.png" alt="coffee bean">
+        </div>
+        <div class="programs__item-2">
+          <img src="assets/images/coffebean2.png" alt="coffee bean">
+        </div>
+        <div class="programs__item-3">
+          <img src="assets/images/wood-coffee-beans-coffee.png" alt="coffee beans">
+        </div>
+        <div class="programs__content">
+          <div class="programs__section-title">
+            <i class="fa fa-star" aria-hidden="true"></i>
+              <h2>PROGRAMS</h2>
+            <i class="fa fa-star" aria-hidden="true"></i>
+          </div>
+
+          <div class="programs__section-subtitle">
+            <p>
+              We share their experience and professional barista championships multiple winners
+            </p>
+          </div>
+
+          <div class="programs__tabs">
+
+            <ul class="nav nav-tabs" id="programsTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="basic-tab" data-bs-toggle="tab" data-bs-target="#basic-tab-pane" type="button" role="tab" aria-controls="basic-tab-pane" aria-selected="true">Basic</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="premium-tab" data-bs-toggle="tab" data-bs-target="#premium-tab-pane" type="button" role="tab" aria-controls="premium-tab-pane" aria-selected="false">Premium</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="platinum-tab" data-bs-toggle="tab" data-bs-target="#platinum-tab-pane" type="button" role="tab" aria-controls="platinum-tab-pane" aria-selected="false">Platinum</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="programsTabContent">
+              <div class="tab-pane fade show active" id="basic-tab-pane" role="tabpanel" aria-labelledby="basic-tab" tabindex="0">
+                <div class="programs__single programs__basic">
+                  <div class="programs__single-watermark">
+                    <h1>BASIC</h1>
+                  </div>
+                  <div class="programs__basic-header">
+                    <picture>
+                      <!-- WebP source with srcset for responsive images -->
+                      <source
+                        type="image/webp"
+                        srcset="
+                          assets/images/basic-program-320p.webp   320w,
+                          assets/images/basic-program-480p.webp   480w,
+                          assets/images/basic-program-800p.webp   800w,
+                          assets/images/basic-program-1200p.webp 1200w
+                        "
+                      />
+                      <!-- Fallback for browsers that don't support the <picture> element -->
+                      <img
+                        src="assets/images/basic-program-800p.jpg"
+                        alt="basic program cover"
+                        srcset="
+                          assets/images/basic-program-320p.jpg   320w,
+                          assets/images/basic-program-480p.jpg   480w,
+                          assets/images/basic-program-800p.jpg   800w,
+                          assets/images/basic-program-1200p.jpg 1200w
+                        "
+                      />
+                    </picture>
+                    <div class="programs__basic-info">
+                        <div>
+                          <h3>Beginners Course</h3>
+                        </div>
+                        <div class="programs__single-feats-container">
+                          <div class="programs__single-features">
+                            <span>
+                              <img src="assets/images/form.png" alt="form">
+                              Certificate
+                            </span>
+
+                            <span>
+                              <img src="assets/images/clock.png" alt="clock">
+                              240 minets
+                            </span>
+                          </div>
+                          <h2 class="programs__single-pricing">
+                            1 500<span>usd</span>
+                          </h2>
+                          <button class="btn-primary">
+                            REGISTRATION
+                          </button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="programs__basic-concepts">
+                    <div class="programs__basic-concepts-column">
+                      <h5><br class="blank-space">Provenance<br>
+                        coffee and basic concepts:
+                      </h5>
+                      <ul>
+                        <li>Legend of the origin of coffee.</li>
+                        <li>Chronicle of the spread of the coffee tree</li>
+                        <li>What is coffee?</li>
+                        <li>The structure of the coffee berry</li>
+                        <li>Arabica and Robusta</li>
+                        <li>Coffee Belt land</li>
+                        <li>Fruiting coffee tree</li>
+                        <li>Seven steps of the coffee plantation to the consumer</li>
+                        <li>Breeding and hybridization of coffee tree</li>
+                      </ul>
+                    </div>
+                    <div class="programs__basic-concepts-column">
+                      <h5><br class="blank-space"><br class="blank-space">coffee production technology:
+                      </h5>
+                      <ul>
+                        <li>Methods for collecting coffee berries</li>
+                        <li>Processing collected berries</li>
+                        <li>Calibration and sorting</li>
+                        <li>Some methods of classification and labeling of coffee beans</li>
+                        <li>Formation of grade names</li>
+                        <li>Storage of green (not fried) coffee</li>
+                      </ul>
+                    </div>
+                    <div class="programs__basic-concepts-column">
+                      <h5>roasting Technology <br>
+                        bean and Stage <br>
+                        types of roasting:
+                      </h5>
+                      <ul>
+                        <li>The technology of roasting coffee beans</li>
+                        <li>Changes in the beans</li>
+                        <li>Stages and types of roasting</li>
+                        <li>Roasted coffee. Monosorta and hood</li>
+                        <li>Decaffeination of coffee</li>
+                        <li>Flavoring</li>
+                        <li>Storage roasted coffee</li>
+                      </ul>
+                    </div>
+                    
+                  </div>
+                  <div class="programs__basic-concepts-swiper swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="programs__basic-concepts-column">
+                          <h5><br class="blank-space">Provenance<br>
+                            coffee and basic concepts:
+                          </h5>
+                          <ul>
+                            <li>Legend of the origin of coffee.</li>
+                            <li>Chronicle of the spread of the coffee tree</li>
+                            <li>What is coffee?</li>
+                            <li>The structure of the coffee berry</li>
+                            <li>Arabica and Robusta</li>
+                            <li>Coffee Belt land</li>
+                            <li>Fruiting coffee tree</li>
+                            <li>Seven steps of the coffee plantation to the consumer</li>
+                            <li>Breeding and hybridization of coffee tree</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="programs__basic-concepts-column">
+                          <h5><br class="blank-space"><br class="blank-space">coffee production technology:
+                          </h5>
+                          <ul>
+                            <li>Methods for collecting coffee berries</li>
+                            <li>Processing collected berries</li>
+                            <li>Calibration and sorting</li>
+                            <li>Some methods of classification and labeling of coffee beans</li>
+                            <li>Formation of grade names</li>
+                            <li>Storage of green (not fried) coffee</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="programs__basic-concepts-column">
+                          <h5>roasting Technology <br>
+                            bean and Stage <br>
+                            types of roasting:
+                          </h5>
+                          <ul>
+                            <li>The technology of roasting coffee beans</li>
+                            <li>Changes in the beans</li>
+                            <li>Stages and types of roasting</li>
+                            <li>Roasted coffee. Monosorta and hood</li>
+                            <li>Decaffeination of coffee</li>
+                            <li>Flavoring</li>
+                            <li>Storage roasted coffee</li>
+                          </ul>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+
+                  <div class="programs__basic-perks">
+                    <h5>The course also includes:
+                    </h5>
+                    <ul>
+                      <li><i class="fa fa-check" aria-hidden="true"></i> <span>Coffee machine and grinder - practice - types of coffee machines and coffee grinders</span></li>
+                      <li><i class="fa fa-check" aria-hidden="true"></i> <span>What makes professional coffee machines and coffee grinders.</span></li>
+                      <li><i class="fa fa-times" aria-hidden="true"></i> <span>Main components of coffee machines and coffee-Lathes, autolathes. Their purpose</span></li>
+                      <li><i class="fa fa-times" aria-hidden="true"></i> <span>How to choose a coffee machine and coffee grinder</span></li>
+                      <li><i class="fa fa-times" aria-hidden="true"></i> <span>The structure of the machine. How to maintain, clean and customize coffee machine</span></li>
+                      <li><i class="fa fa-times" aria-hidden="true"></i> <span>The structure of the grinders. How to maintain, clean and customize coffee Molko</span></li>
+                      <li><i class="fa fa-check" aria-hidden="true"></i> <span>Making beverages - praktika- machines and espresso rules</span></li>
+                      <li><i class="fa fa-times" aria-hidden="true"></i> <span>Technology and regulations frothed milk</span></li>
+                      <li><i class="fa fa-times" aria-hidden="true"></i> <span>Terms of tasting coffee</span></li>
+                      <li><i class="fa fa-times" aria-hidden="true"></i> <span>Terms of preparation of standard drinks line: espresso, cappuccino, latte and others.</span></li>
+                      <li><i class="fa fa-times" aria-hidden="true"></i> <span>Latte Art - Features practice and the importance of Latte Art in business and the barista</span></li>
+                      <li><i class="fa fa-times" aria-hidden="true"></i> <span>1 views Latte Art - Pitching</span></li>
+                      <li><i class="fa fa-times" aria-hidden="true"></i> <span>2 views Latte Art - topping</span></li>
+                      <li><i class="fa fa-times" aria-hidden="true"></i> <span>3 views Latte Art - Etching</span></li>
+                      <li><i class="fa fa-times" aria-hidden="true"></i> <span>4 views Latte Art - chocolate chip stencils</span></li>
+                    </ul>
+                    <table>
+                      <tr>
+                        <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                        <td>Coffee machine and grinder - practice - types of coffee machines and coffee grinders</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                        <td>What makes professional coffee machines and coffee grinders.</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                        <td>Main components of coffee machines and coffee-Lathes, autolathes. Their purpose</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                        <td>How to choose a coffee machine and coffee grinder</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                        <td>The structure of the machine. How to maintain, clean and customize coffee machine</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                        <td>The structure of the grinders. How to maintain, clean and customize coffee Molko</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                        <td>Making beverages - praktika- machines and espresso rules</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                        <td>Technology and regulations frothed milk</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                        <td>Terms of tasting coffee</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                        <td>Terms of preparation of standard drinks line: espresso, cappuccino, latte and others.</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                        <td>Latte Art - Features practice and the importance of Latte Art in business and the barista</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                        <td>1 views Latte Art - Pitching</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                        <td>2 views Latte Art - topping</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                        <td>3 views Latte Art - Etching</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                        <td>4 views Latte Art - chocolate chip stencils</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="premium-tab-pane" role="tabpanel" aria-labelledby="premium-tab" tabindex="0">...</div>
+              <div class="tab-pane fade" id="platinum-tab-pane" role="tabpanel" aria-labelledby="platinum-tab" tabindex="0">...</div>
+            </div>
+          </div>
+        </div>
+			</section>
+      <section id="gallery" class="gallery">
+        <div class="gallery__background">
+          <picture>
+            <!-- WebP source with srcset for responsive images -->
+            <source
+              type="image/webp"
+              srcset="
+                assets/images/beans-bg-320p.webp   320w,
+                assets/images/beans-bg-480p.webp   480w,
+                assets/images/beans-bg-800p.webp   800w,
+                assets/images/beans-bg-1200p.webp 1200w,
+                assets/images/beans-bg-1080p.webp 1920w,
+                assets/images/beans-bg-1440p.webp 2560w,
+                assets/images/beans-bg-4k.webp    3840w
+              "
+            />
+            <!-- Fallback for browsers that don't support the <picture> element -->
+            <img
+              src="assets/images/beans-bg-800p.jpg"
+              alt="beans background"
+              srcset="
+                assets/images/beans-bg-320p.jpg   320w,
+                assets/images/beans-bg-480p.jpg   480w,
+                assets/images/beans-bg-800p.jpg   800w,
+                assets/images/beans-bg-1200p.jpg 1200w,
+                assets/images/beans-bg-1080p.jpg 1920w,
+                assets/images/beans-bg-1440p.jpg 2560w,
+                assets/images/beans-bg-4k.jpg    3840w
+              "
+            />
+          </picture>
+        </div>
+        <div class="gallery__item-1">
+          <img
+            src="assets/images/mask-800p.png"
+            srcset="
+              assets/images/mask-320p.png   320w,
+              assets/images/mask-480p.png   480w,
+              assets/images/mask-800p.png   800w,
+              assets/images/mask-1200p.png 1200w,
+              assets/images/mask-1080p.png 1920w,
+              assets/images/mask-1440p.png 2560w,
+              assets/images/mask-4k.png    3840w
+            "
+          />
+        </div>
+        <div class="gallery__item-2">
+          <img
+            src="assets/images/mask-800p.png"
+            srcset="
+              assets/images/mask-320p.png   320w,
+              assets/images/mask-480p.png   480w,
+              assets/images/mask-800p.png   800w,
+              assets/images/mask-1200p.png 1200w,
+              assets/images/mask-1080p.png 1920w,
+              assets/images/mask-1440p.png 2560w,
+              assets/images/mask-4k.png    3840w
+            "
+          />
+        </div>
+        <div class="gallery__item-3">
+          <img
+            src="assets/images/blurred-bean-01.png"
+            alt="coffee bean"
+          />
+        </div>
+        <div class="gallery__item-4">
+          <img
+            src="assets/images/blurred-bean-02.png"
+            alt="coffee bean"
+          />
+        </div>
+        <div class="gallery__content">
+          <div class="gallery__section-title">
+            <img src="assets/images/3line-separator-white.png" alt="separator">
+            <h2>GALLERY</h2>
+            <img class="r" src="assets/images/3line-separator-white.png" alt="separator">
+          </div>
+
+          <div class="gallery__section-subtitle">
+            <p>
+              You yourself are testing the taste benefits of each method<br>
+              and select the type of cooking yourself
+            </p>
+          </div>
+
+          <div class="gallery__swiper swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture>
+                  <!-- WebP source with srcset for responsive images -->
+                  <source
+                    type="image/webp"
+                    srcset="
+                      assets/images/gallery-1-320p.webp   320w,
+                      assets/images/gallery-1-480p.webp   480w,
+                      assets/images/gallery-1-800p.webp   800w,
+                      assets/images/gallery-1-1200p.webp 1200w
+                    "
+                  />
+                  <!-- Fallback for browsers that don't support the <picture> element -->
+                  <img
+                    src="assets/images/gallery-1-800p.jpg"
+                    alt="busy coffee shop"
+                    srcset="
+                      assets/images/gallery-1-320p.jpg   320w,
+                      assets/images/gallery-1-480p.jpg   480w,
+                      assets/images/gallery-1-800p.jpg   800w,
+                      assets/images/gallery-1-1200p.jpg 1200w
+                    "
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <!-- WebP source with srcset for responsive images -->
+                  <source
+                    type="image/webp"
+                    srcset="
+                      assets/images/machine-320p.webp   320w,
+                      assets/images/machine-480p.webp   480w,
+                      assets/images/machine-800p.webp   800w,
+                      assets/images/machine-1200p.webp 1200w
+                    "
+                  />
+                  <!-- Fallback for browsers that don't support the <picture> element -->
+                  <img
+                    src="assets/images/machine-800p.jpg"
+                    alt="Coffee machine"
+                    srcset="
+                      assets/images/machine-320p.jpg   320w,
+                      assets/images/machine-480p.jpg   480w,
+                      assets/images/machine-800p.jpg   800w,
+                      assets/images/machine-1200p.jpg 1200w
+                    "
+                  />
+                </picture>
+              </div>
+              
+              <div class="swiper-slide">
+                <picture>
+                  <!-- WebP source with srcset for responsive images -->
+                  <source
+                    type="image/webp"
+                    srcset="
+                      assets/images/barista-320p.webp   320w,
+                      assets/images/barista-480p.webp   480w,
+                      assets/images/barista-800p.webp   800w,
+                      assets/images/barista-1200p.webp 1200w
+                    "
+                  />
+                  <!-- Fallback for browsers that don't support the <picture> element -->
+                  <img
+                    src="assets/images/barista-800p.jpg"
+                    alt="Barista serving coffee"
+                    srcset="
+                      assets/images/barista-320p.jpg   320w,
+                      assets/images/barista-480p.jpg   480w,
+                      assets/images/barista-800p.jpg   800w,
+                      assets/images/barista-1200p.jpg 1200w
+                    "
+                  />
+                </picture>
+              </div>
+            </div>
+            <div class="swiper-controls">
+              <button class="swiper-button-prev"></button>
+              <div class="swiper-pagination-custom"></div>
+              <button class="swiper-button-next"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="testimonials" class="testimonials">
+        <div class="testimonials__background">
+          <picture>
+            <!-- WebP source with srcset for responsive images -->
+            <source
+              type="image/webp"
+              srcset="
+                assets/images/bg-320p.webp   320w,
+                assets/images/bg-480p.webp   480w,
+                assets/images/bg-800p.webp   800w,
+                assets/images/bg-1200p.webp 1200w,
+                assets/images/bg-1080p.webp 1920w,
+                assets/images/bg-1440p.webp 2560w,
+                assets/images/bg-4k.webp    3840w
+              "
+            />
+            <!-- Fallback for browsers that don't support the <picture> element -->
+            <img
+              src="assets/images/bg-800p.jpg"
+              alt="textured background"
+              srcset="
+                assets/images/bg-320p.jpg   320w,
+                assets/images/bg-480p.jpg   480w,
+                assets/images/bg-800p.jpg   800w,
+                assets/images/bg-1200p.jpg 1200w,
+                assets/images/bg-1080p.jpg 1920w,
+                assets/images/bg-1440p.jpg 2560w,
+                assets/images/bg-4k.jpg    3840w
+              "
+            />
+          </picture>
+        </div>
+        <div class="testimonials__content">
+          <div class="testimonials__section-title">
+            <h2>TESTIMONIALS</h2>
+          </div>
+
+          <div class="testimonials__section-subtitle">
+            <p>
+              We have enough patience to teach you the art of coffee
+            </p>
+          </div>
+
+          <div class="testimonials__swiper swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonials__block">
+                  <div class="testimonials__block-thumbnail">
+                    <img src="assets/images/testimonial-1.png" alt="testimonial thumbnail">
+                    <div class="fb-container">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <h5>ALEX NIKANDROV</h5>
+                  <p>
+                    Our company is grateful for the delicious and freshly roasted coffee in our office every day! Our staff of more than 300 people, appreciate quality and flavor of the coffee, because that would be important for our office staff were every morning refreshed and in a good mood! Recommended!
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonials__block">
+                  <div class="testimonials__block-thumbnail">
+                    <img src="assets/images/testimonial-1.png" alt="testimonial thumbnail">
+                    <div class="fb-container">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <h5>ALEX NIKANDROV</h5>
+                  <p>
+                    Our company is grateful for the delicious and freshly roasted coffee in our office every day! Our staff of more than 300 people, appreciate quality and flavor of the coffee, because that would be important for our office staff were every morning refreshed and in a good mood! Recommended!
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonials__block">
+                  <div class="testimonials__block-thumbnail">
+                    <img src="assets/images/testimonial-1.png" alt="testimonial thumbnail">
+                    <div class="fb-container">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <h5>ALEX NIKANDROV</h5>
+                  <p>
+                    Our company is grateful for the delicious and freshly roasted coffee in our office every day! Our staff of more than 300 people, appreciate quality and flavor of the coffee, because that would be important for our office staff were every morning refreshed and in a good mood! Recommended!
+                  </p>
+                </div>
+              </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <button class="swiper-button-next"></button>
+              <button class="swiper-button-prev"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="partners" class="partners">
+        <div class="partners__background">
+          <picture>
+            <!-- WebP source with srcset for responsive images -->
+            <source
+              type="image/webp"
+              srcset="
+                assets/images/gray-bg-40-320p.webp   320w,
+                assets/images/gray-bg-40-480p.webp   480w,
+                assets/images/gray-bg-40-800p.webp   800w,
+                assets/images/gray-bg-40-1200p.webp 1200w,
+                assets/images/gray-bg-40-1080p.webp 1920w,
+                assets/images/gray-bg-40-1440p.webp 2560w,
+                assets/images/gray-bg-40-4k.webp    3840w
+              "
+            />
+            <!-- Fallback for browsers that don't support the <picture> element -->
+            <img
+              src="assets/images/gray-bg-40-800p.jpg"
+              alt="gray textured background"
+              srcset="
+                assets/images/gray-bg-40-320p.jpg   320w,
+                assets/images/gray-bg-40-480p.jpg   480w,
+                assets/images/gray-bg-40-800p.jpg   800w,
+                assets/images/gray-bg-40-1200p.jpg 1200w,
+                assets/images/gray-bg-40-1080p.jpg 1920w,
+                assets/images/gray-bg-40-1440p.jpg 2560w,
+                assets/images/gray-bg-40-4k.jpg    3840w
+              "
+            />
+          </picture>
+        </div>
+        <div class="partners__content">
+          <div class="partners__section-title">
+            <img src="assets/images/3line-separator.png" alt="separator">
+            <h2>OUR PARTNERS</h2>
+            <img class="r" src="assets/images/3line-separator.png" alt="separator">
+          </div>
+          <div class="partners__title-separator"></div>
+
+          <div class="partners__swiper swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="assets/images/abajour_logo.png" alt="abajour logo">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/altbee_logo.png" alt="altbee logo">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/dedushka_logo.png" alt="dedushka logo">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/gdeburger_logo.png" alt="gdeburger logo">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/logo_baden_baden.png" alt="baden baden logo">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/images/logo_klass.png" alt="klass logo">
+              </div>
+              </div>
+              <button class="swiper-button-next"></button>
+              <button class="swiper-button-prev"></button>
+            </div>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <div class="contact__item-1">
+          <img src="assets/images/grain1.png" alt="coffee beans">
+        </div>
+        <div class="contact__item-2">
+          <img src="assets/images/coffebean5_2x-2.png" alt="coffee bean">
+        </div>
+        <div class="contact__background">
+          <picture>
+            <!-- WebP source with srcset for responsive images -->
+            <source
+              type="image/webp"
+              srcset="
+                assets/images/bg-320p.webp   320w,
+                assets/images/bg-480p.webp   480w,
+                assets/images/bg-800p.webp   800w,
+                assets/images/bg-1200p.webp 1200w,
+                assets/images/bg-1080p.webp 1920w,
+                assets/images/bg-1440p.webp 2560w,
+                assets/images/bg-4k.webp    3840w
+              "
+            />
+            <!-- Fallback for browsers that don't support the <picture> element -->
+            <img
+              src="assets/images/bg-800p.jpg"
+              alt="textured background"
+              srcset="
+                assets/images/bg-320p.jpg   320w,
+                assets/images/bg-480p.jpg   480w,
+                assets/images/bg-800p.jpg   800w,
+                assets/images/bg-1200p.jpg 1200w,
+                assets/images/bg-1080p.jpg 1920w,
+                assets/images/bg-1440p.jpg 2560w,
+                assets/images/bg-4k.jpg    3840w
+              "
+            />
+          </picture>
+        </div>
+        <div class="contact__blocks">
+          <div class="contact__blocks-img">
+            <img src="assets/images/coffebean5_2x.png" alt="coffee bean">
+          </div>
+          <div class="contact__form-container">
+            <div class="contact__section-title">
+              <h2>HAVE QUESTIONS?</h2>
+            </div>
+            <div class="contact__title-separator"></div>
+            <div class="contact__section-subtitle">
+              <p>
+                Leave a request and we will contact you shortly
+              </p>
+            </div>
+            <form action="">
+              <div class="contact__form-inputs">
+                <input class="input-primary" type="text" placeholder="YOUR NAME">
+                <input class="input-primary" type="text" placeholder="CONTACT NUMBER">
+              </div>
+              <div class="contact__form-submit-container">
+                <button class="btn-outline">
+                  SEND
+                </button>
+                <div class="arrow">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div id="footer" class="footer">
+        <div class="footer__item-1">
+          <img
+            src="assets/images/mask-800p.png"
+            srcset="
+              assets/images/mask-320p.png   320w,
+              assets/images/mask-480p.png   480w,
+              assets/images/mask-800p.png   800w,
+              assets/images/mask-1200p.png 1200w,
+              assets/images/mask-1080p.png 1920w,
+              assets/images/mask-1440p.png 2560w,
+              assets/images/mask-4k.png    3840w
+            "
+          />
+        </div>
+        <div class="footer__background">
+            <img
+              src="assets/images/footer-bg-800p.jpg"
+              alt="coffee beans"
+              srcset="
+                assets/images/footer-bg-320p.jpg   320w,
+                assets/images/footer-bg-480p.jpg   480w,
+                assets/images/footer-bg-800p.jpg   800w,
+                assets/images/footer-bg-1200p.jpg 1200w,
+                assets/images/footer-bg-1080p.jpg 1920w,
+                assets/images/footer-bg-1440p.jpg 2560w,
+                assets/images/footer-bg-4k.jpg    3840w
+              "
+            />
+        </div>
+        <div class="footer__content">
+          <div class="footer__section-title">
+            <h2>PROFESSIONAL SCHOOL<br>BARISTA</h2>
+          </div>
+          <div class="footer__columns">
+            <div class="footer__section-subtitle">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+              </p>
+            </div>
+            <div class="footer__section-subtitle">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+              </p>
+            </div>
+          </div>
+          <div class="footer__table">
+            <div class="table-row single">
+              <ul class="footer__menu">
+                <li><a href="#programs">PROGRAM</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#testimonials">TESTIMONIALS</a></li>
+                <li><a href="#partners">PARTNERS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+              </ul>
+            </div>
+            <div class="table-row">
+              <div class="table-col">
+                <img src="assets/images/fa-phone.png" alt="phone icon">
+              </div>
+              <div class="table-col">
+                <img src="assets/images/fa-pin.png" alt="pin icon">
+              </div>
+              <div class="table-col">
+                <img src="assets/images/fa-envelope.png" alt="email icon">
+              </div>
+            </div>
+            <div class="table-row">
+              <div class="table-col">
+                <a
+                  href="tel:+38000000000"
+                  aria-label="Call us at +38 000 000 000"
+                >
+                +38 000 000 000 
+                </a>
+              </div>
+              <div class="table-col">UKRAINE, 61002</div>
+              <div class="table-col">
+                <a href="mailto:hello@.com" aria-label="Send an email to hello@.com">
+                  hello@.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/swiper@5.0.3/js/swiper.min.js"></script>
+    <script src="main.js" async defer></script>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+#gallery {
+	padding-top: 152px;
+	padding-bottom: 76px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.gallery {
+
+		&__item-1 {
+			position: absolute;
+			top: -5px;
+			left: 0;
+			right: 0;
+			transform: rotate(180deg);
+			img {
+				width: 100%;
+			}
+		}
+
+		&__item-2 {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			img {
+				width: 100%;
+			}
+		}
+
+		&__item-3 {
+			position: absolute;
+			top: 0;
+			left: 3%;
+			img {
+				width: 125px;
+				@include max-width($breakpoint-xl-min) {
+					width: 100px;
+				}
+				@include max-width($breakpoint-md-min) {
+					width: 75px;
+				}
+			}
+		}
+
+		&__item-4 {
+			position: absolute;
+			bottom: 0;
+			right: 2%;
+			img {
+				width: 150px;
+				@include max-width($breakpoint-xl-min) {
+					width: 125px;
+				}
+				@include max-width($breakpoint-md-min) {
+					width: 100px;
+				}
+			}
+		}
+
+		&__background {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 0;
+
+			img {
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+				width: 100%;
+			}
+		}
+
+		&__content {
+			width: 100%;
+			z-index: 1;
+		}
+
+		&__swiper {
+			margin: 80px 0;
+			.swiper-slide {
+				width: auto !important;
+				text-align: center;
+
+				@include max-width($breakpoint-md-min) {
+					width: 100% !important;
+				}
+				
+				img {
+					height: 100%;
+					@include max-width($breakpoint-md-min) {
+						width: 100% !important;
+					}
+				}
+			}
+			.swiper-controls {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-top: 80px;
+				column-gap: 120px;
+
+				@include max-width($breakpoint-md-min) {
+					column-gap: 50px;
+				}
+
+				.swiper-pagination-custom {
+					width: auto;
+					@include max-width($breakpoint-md-min) {
+						transform: translateY(-20px);
+					}
+				}
+
+				.swiper-button-prev {
+					&::before {
+						left: 43%;
+					}
+				}
+
+				.swiper-button-next {
+					&::before {
+						right: 43%;
+					}
+				}
+
+				.swiper-button-prev,
+				.swiper-button-next {
+					position: relative;
+					margin: 0;
+					width: unset;
+					height: unset;
+					height: 60px;
+					width: 60px;
+					background-color: transparent;
+					border: 1px solid $orange-100;
+
+					&::after {
+						color: $white-200;
+						font-size: 20px;
+					}
+					&::before {
+						content: '';
+						border-radius: 2px;
+						height: 2px;
+						width: 120px;
+						position: absolute;
+						background-color: $white-200;
+					}
+				}
+
+				.swiper-pagination-bullet {
+					display: none;
+					color: $text-white;
+					font-size: 24px;
+					width: unset;
+					height: inherit;
+					background-color: transparent;
+					justify-content: center;
+
+					span {
+						color: $text-orange;
+						margin: 0 8px;
+					}
+
+					&-active {
+						display: flex !important;
+					}
+				}
+			}
+		}
+
+		&__section-title {
+			@include section-title($text-white);
+			img {
+				height: 15px;
+			}
+			.r {
+				transform: rotate(180deg);
+			}
+		}
+
+		&__section-subtitle {
+			@include section-subtitle($text-white);
+			p {
+				margin: 0;
+			}
+		}
+	}
+}

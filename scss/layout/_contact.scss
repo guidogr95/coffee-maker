@@ -1,0 +1,158 @@
+#contact {
+	padding-top: 64px;
+	padding-bottom: 120px;
+	padding-left: 20px;
+	padding-right: 20px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+
+	.contact {
+
+		&__item-1 {
+			position: absolute;
+			left: 0;
+			top: 7%;
+			z-index: 2;
+			@include max-width($breakpoint-md-min) {
+				top: 2%;
+			}
+			img {
+				height: 600px;
+				@include max-width($breakpoint-xl-min) {
+					display: none;
+				}
+			}
+		}
+
+		&__item-2 {
+			position: absolute;
+			right: 0;
+			bottom: 5%;
+			z-index: 1;
+			img {
+				height: 200px;
+			}
+		}
+
+		&__background {
+			position: absolute;
+			top: -8px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 0;
+
+			img {
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+				width: 100%;
+			}
+		}
+
+		&__blocks {
+			display: flex;
+			column-gap: 100px;
+			z-index: 1;
+			@include max-width-section-content();
+
+			&-img {
+				flex: 1;
+
+				@include max-width($breakpoint-xl-min) {
+					display: none;
+				}
+				img {
+					width: 100%;
+				}
+			}
+		}
+
+		&__form-container {
+			display: flex;
+			flex-direction: column;
+			width: 65%;
+
+			@include max-width($breakpoint-xl-min) {
+				width: 100%;
+			}
+			
+			form {
+				display: flex;
+				column-gap: 60px;
+				align-items: flex-end;
+				margin-top: 80px;
+				@include max-width($breakpoint-xl-min) {
+					flex-direction: column;
+					align-items: flex-start;
+					row-gap: 40px;
+				}
+			}
+		}
+
+		&__form-inputs {
+			display: flex;
+			flex-direction: column;
+			width: 50%;
+			row-gap: 40px;
+			@include max-width($breakpoint-xl-min) {
+				width: 100%;
+			}
+		}
+
+		&__form-submit-container {
+			position: relative;
+			width: 31%;
+			@include max-width($breakpoint-lg-min) {
+				width: 77%;
+			}
+			.arrow {
+				position: absolute;
+				width: 100%;
+				top: 0;
+				left: 75%;
+				bottom: 0;
+				display: flex;
+				align-items: center;
+				&::after {
+					content: 'next';
+					font-family: swiper-icons;
+					font-size: 20px;
+					color: $text-black;
+				}
+				&::before {
+					content: '';
+					height: 1px;
+					width: 50%;
+					background-color: $black-200;
+					transform: translateX(9px);
+				}
+			}
+		}
+
+		&__section-title {
+			@include section-title($text-black);
+			text-align: left;
+			justify-content: flex-start;
+			margin-bottom: 0;
+		}
+
+		&__title-separator {
+			height: 1px;
+			background-color: $black-200;
+			width: 100%;
+			margin-top: 16px;
+			margin-bottom: 24px;
+		}
+
+		&__section-subtitle {
+			@include section-subtitle();
+			justify-content: flex-start;
+			text-align: left;
+			margin-bottom: 0;
+		}
+	}
+}

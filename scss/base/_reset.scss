@@ -1,0 +1,46 @@
+/* Universal Selector Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* HTML and Body */
+html, body {
+	height: 100%;
+	font-size: 100%;
+	line-height: 1.5;
+	font-family: 'Minion Pro', Arial, sans-serif;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none !important;
+	color: inherit !important;
+}
+
+.swiper-container {
+  width: 100%
+}
+
+.swiper-slide {
+  width: 100%;
+  border-radius: 90px;
+  padding: 0 10px;
+}
+
+.swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+	opacity: 1;
+	background-color: $black-200;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: $orange-200;
+}

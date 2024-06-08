@@ -1,0 +1,130 @@
+@mixin transition($duration, $delay: allow-discrete, $ease: ease-in, $property: all) {
+  transition: $property $duration $ease $delay;
+}
+
+@mixin nav-link-border($width: 0) {
+	&::before {
+		content: '';
+		position: absolute;
+		width: $width;
+		left: 0;
+		top: calc(100% - #{$desktop-navitem-bottom-border-size/2});
+		height: $desktop-navitem-bottom-border-size;
+		background-color: $text-orange;
+		@include transition(.3s, allow-discrete, ease-out, width);
+	}
+}
+
+@mixin active-nav-link() {
+	color: $text-orange;
+  
+	@include nav-link-border(100%);
+}
+
+@mixin responsive-background-images($images) {
+  @each $image in $images {
+    $image-url: nth($image, 1);
+    $min-width: nth($image, 2);
+
+    @media (min-width: #{$min-width}px) {
+			background-image: url('#{$image-url}');
+    }
+  }
+}
+
+@mixin min-width($width) {
+  @media (min-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin max-width($width) {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin section-title($color: $text-white) {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	justify-content: center;
+	margin-bottom: 40px;
+	text-align: center;
+	h2 {
+		font-size: 44px;
+		color: $color;
+		font-family: 'Intro Rust';
+		margin-bottom: 0;	
+		line-height: 1;
+		@include max-width($breakpoint-xl-min) {
+			font-size: 36px;
+		}
+	}
+}
+
+@mixin section-subtitle($color: $text-dark-blue) {
+	font-size: 16px;
+	color: $color;
+	text-align: center;
+	@include max-width($breakpoint-xl-min) {
+		font-size: 14px;
+	}
+}
+
+@mixin button(
+	$background: $black-200,
+	$color: $text-white,
+	$border-color: $black-200,
+	$font-size: 12px
+) {
+	background: $background;
+	color: $color;
+	padding: 12px 56px;
+	text-align: center;
+	font-family: 'Intro';
+	font-size: $font-size;
+	letter-spacing: 1px;
+	border-radius: 2px;
+	$border-color: $border-color;
+	border-style: solid;
+	width: 100%;
+}
+
+@mixin program-perks-subtitle {
+	font-family: Intro;
+	text-transform: uppercase;
+	color: $text-black;
+	font-size: 17px;
+	word-spacing: 0px;
+	letter-spacing: -1px;
+	margin-bottom: 32px;
+}
+
+@mixin max-width-section-content {
+	width: 100%;
+	z-index: 1;
+	max-width: $content-max-width;
+}
+
+@mixin input() {
+	border-top-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+	border-bottom: 1px solid $black-200;
+	background-color: transparent;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	&::placeholder {
+		font-family: Intro;
+		color: $text-black;
+	}
+	&:focus {
+		outline: none; 
+		box-shadow: 0 0 5px hex-to-rgba($black-200, 0.4); 
+		border-color: hex-to-rgba($black-200, 0.4);
+	}
+	&:focus-visible {
+		outline: 2px solid hex-to-rgba($black-200, 0.4);
+	}
+}

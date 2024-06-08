@@ -1,0 +1,70 @@
+// Intro
+
+/* Regular */
+@font-face {
+	font-family: 'Intro';
+	src: url('assets/fonts/Intro.otf') format('opentype');
+	font-weight: 400; 
+	font-style: normal; 
+	font-display: swap; 
+}
+
+/* Rust */
+@font-face {
+	font-family: 'Intro Rust';
+	src: url('assets/fonts/IntroRustG-Base2Line.otf') format('opentype');
+	font-weight: 400; 
+	font-style: normal; 
+	font-display: swap; 
+}
+
+// Minion Pro
+
+/* Regular */
+@font-face {
+	font-family: 'Minion Pro';
+	src: url('assets/fonts/MinionPro-Regular.otf') format('opentype');
+	font-weight: 400; 
+	font-style: normal; 
+	font-display: swap; 
+}
+
+// Montserrat
+
+/* Regular */
+@font-face {
+	font-family: 'Montserrat';
+	src: url('assets/fonts/Montserrat-Regular.ttf') format('truetype');
+	font-weight: 400; 
+	font-style: normal; 
+	font-display: swap; 
+}
+
+/* Bold */
+@font-face {
+	font-family: 'Montserrat';
+	src: url('assets/fonts/Montserrat-Bold.ttf') format('truetype');
+	font-weight: 700; 
+	font-style: normal; 
+	font-display: swap; 
+}
+
+// Playfair Display
+
+/* Regular */
+@font-face {
+	font-family: 'Playfair Display';
+	src: url('assets/fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+	font-weight: 400; 
+	font-style: normal; 
+	font-display: swap; 
+}
+
+/* Black */
+@font-face {
+	font-family: 'Playfair Display';
+	src: url('assets/fonts/PlayfairDisplay-Black.ttf') format('truetype');
+	font-weight: 900; 
+	font-style: normal; 
+	font-display: swap; 
+}

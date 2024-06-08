@@ -1,0 +1,44 @@
+$breakpoint-xs-max: 576px;
+$breakpoint-md-min: 768px;
+$breakpoint-lg-min: 992px;
+$breakpoint-lg-max: 1040px;
+$breakpoint-xl-min: 1200px;
+$breakpoint-xxl-min: 1440px;
+$breakpoint-ws-min: 1600px;
+$breakpoint-fhd-min: 1920px;
+$breakpoint-wqhd-min: 2560px;
+$breakpoint-4k-min: 3840px;
+
+$orange-100: #fbba65;
+$orange-200: #d7b579;
+
+$white-100: #fff;
+$white-200: #efefef;
+
+$gray-100: #7e7978;
+$gray-200: #aeaeae;
+$gray-300: #dedede;
+$gray-400: #949494;
+$gray-500: #4c4c4c;
+
+$green-100: #4a9d00;
+
+$red-100: #e30000;
+
+$black-100: #000;
+$black-200: #101010;
+
+$dark-blue-100: #485260;
+
+$fb-blue: #2467b6;
+
+$text-orange: $orange-100;
+$text-white: $white-200;
+$text-black: $black-200;
+$text-dark-blue: $dark-blue-100;
+$text-gray-200: $gray-200;
+$text-gray-300: $gray-300;
+
+$desktop-nav-height: 85px;
+
+$content-max-width: $breakpoint-lg-min;

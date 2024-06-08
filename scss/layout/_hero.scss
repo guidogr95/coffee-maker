@@ -1,0 +1,167 @@
+#hero {
+	min-height: 87vh;
+	position: relative;
+	padding-top: $desktop-nav-height;
+	@include max-width($breakpoint-xl-min) {
+		min-height: 70vh;
+	}
+
+	.hero {
+
+		&__content {
+			padding-top: 120px;
+			padding-right: 20px;
+			padding-left: 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			z-index: 1;
+			position: relative;
+			color: $text-white;
+			font-family: 'Playfair Display';
+			@include max-width($breakpoint-xl-min) {
+				align-items: flex-start;
+				padding-top: 40px;
+			}
+
+			&-link-separator {
+				display: flex;
+				align-items: center;
+				gap: 4px;
+				margin-bottom: 72px;
+				@include max-width($breakpoint-xl-min) {
+					display: none;
+				}
+				.cone {
+					height: 5px;
+					&.right {
+						transform: rotate(180deg);
+					}
+				}
+				.circle {
+					height: 7px;
+					width: 7px;
+					border-radius: 50%;
+					background-color: $orange-200;
+				}
+			}
+
+			&-link {
+				border: 1px solid $text-white;
+				height: 64px;
+				width: 64px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				@include max-width($breakpoint-xl-min) {
+					align-self: center;
+				}
+				.fa-chevron-down {
+					color: $orange-200;
+				}
+			}
+
+			&-stars {
+				display: flex;
+				gap: 20px;
+				justify-content: center;
+				margin-bottom: 36px;
+				@include max-width($breakpoint-xl-min) {
+					display: none;
+				}
+				.fa-star {
+					color: $orange-200;
+				}
+			}
+
+			&-min-title {
+				display: flex;
+				align-items: center;
+				gap: 100px;
+				&-cone {
+					@include max-width($breakpoint-xl-min) {
+						display: none;
+					}
+					height: 6px;
+
+					&.right {
+						transform: rotate(180deg);
+					}
+				}
+				h4 {
+					font-size: 16px;
+					margin-bottom: 0;
+				}
+			}
+			h1 {
+				font-family: Intro Rust;
+				margin-top: 44px;
+				margin-bottom: 44px;
+				font-size: 52px;
+				@include max-width($breakpoint-xl-min) {
+					font-size: 48px;
+				}
+
+				span {
+					color: $text-orange;
+				}
+			}
+			h3 {
+				font-size: 20px;
+				margin-bottom: 36px;
+				@include max-width($breakpoint-xl-min) {
+					margin-bottom: 60px;
+					font-size: 16px;
+				}
+			}
+		}
+
+		&__background {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			img {
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+				width: 100%;
+				z-index: 0;
+			}
+		}
+
+		&__background-footer {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+
+			img {
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+				width: 100%;
+				z-index: 0;
+			}
+		}
+
+		&__footer-item {
+			position: absolute;
+			height: 200px;
+			right: 5%;
+			bottom: -5%;
+			z-index: 1;
+			@include max-width($breakpoint-xl-min) {
+				height: 125px;
+			}
+			@include max-width($breakpoint-md-min) {
+				height: 90px;
+			}
+			img {
+				height: 100%;
+			}
+		}
+	}
+}

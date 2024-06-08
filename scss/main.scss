@@ -1,0 +1,19 @@
+// Utils
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/functions';
+
+// Base
+@import 'base/typography';
+@import 'base/reset';
+@import 'base/components';
+
+// Layout
+@import 'layout/header';
+@import 'layout/hero';
+@import 'layout/programs';
+@import 'layout/gallery';
+@import 'layout/testimonials';
+@import 'layout/partners';
+@import 'layout/contact';
+@import 'layout/footer';
