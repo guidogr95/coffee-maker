@@ -31,6 +31,10 @@ header {
 	}
 
 	&.mobile-header {
+
+		@include min-width(1400px) {
+			display: none;
+		}
 		.mobile-header__top {
 			position: fixed;
 			top: 0;
